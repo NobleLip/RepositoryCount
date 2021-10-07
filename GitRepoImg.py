@@ -12,7 +12,7 @@ for i in Val:
 ## Get Repo Number Done
 Val = list(str(Val))
 
-imagesToChose = ['0.png','1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png','9.png']
+imagesToChose = ['Imgs/0.png','Imgs/1.png','Imgs/2.png','Imgs/3.png','Imgs/4.png','Imgs/5.png','Imgs/6.png','Imgs/7.png','Imgs/8.png','Imgs/9.png']
 imagesNum = []
 for i in Val:
 	imagesNum.append(imagesToChose[int(i)])
