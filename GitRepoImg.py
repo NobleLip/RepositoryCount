@@ -16,7 +16,11 @@ imagesToChose = ['Imgs/0.png','Imgs/1.png','Imgs/2.png','Imgs/3.png','Imgs/4.png
 imagesNum = []
 for i in Val:
 	imagesNum.append(imagesToChose[int(i)])
-images = [Image.open(x) for x in imagesNum]
+images = []
+for x in range(len(imagesNum)):
+	images.append(Image.open(imagesNum[x]))
+	images[x].convert("RGBA")
+
 
 widths, heights = zip(*(i.size for i in images))
 
