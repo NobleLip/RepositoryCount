@@ -1,7 +1,15 @@
 from PIL import Image
 import requests
 from bs4 import BeautifulSoup
-r = requests.get('https://github.com/NobleLip')
+
+import argparse
+
+parser = argparse.ArgumentParser(description="Generate repo count image from GitHub profile.")
+parser.add_argument('username', help='GitHub profile username')
+args = parser.parse_args()
+
+
+r = requests.get('https://github.com/'+args.username)
 Soup = BeautifulSoup(r.text, 'html.parser')
 Val = Soup.find_all(class_='Counter')
 for i in Val:
